@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @entryPointStyles('app')
+</head>
+   <body class="h-screen w-full bg-steel-300">
+      <div class="grid place-content-center h-full">
+         <section class="flex items-center h-full p-16">
+            <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+               <div class="max-w-md text-center text-white">
+                  <h2 class="mb-8 font-extrabold text-9xl">
+                     404
+                  </h2>
+                  <p class="font-display text-2xl font-semibold md:text-3xl">Désolé, nous n'avons pas pu trouver cette page.</p>
+                  <p class="font-display font-medium mt-4 mb-8">Essayer de retourner à la page d'acceuil.</p>
+                  <a href="#" rel="noopener noreferrer" class="inline-flex justify-center items-center font-semibold text-sm rounded-full px-5 py-3 bg-white/10 hover:bg-white/20 text-white whitespace-nowrap transition font-display" onclick="window.history.go(-1); return false;">Retour à la page précendente</a>
+               </div>
+            </div>
+         </section>
+      </div>
+   </body>
+</html>
