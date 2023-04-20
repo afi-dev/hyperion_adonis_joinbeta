@@ -16,7 +16,8 @@
   },
   "preloads": [
     "./start/routes",
-    "./start/kernel"
+    "./start/kernel",
+    "./start/limiter"
   ],
   "providers": [
     "./providers/AppProvider",
@@ -25,7 +26,8 @@
     "@adonisjs/view",
     "@adonisjs/shield",
     "@adonisjs/mail",
-    "@adonisjs/lucid"
+    "@adonisjs/lucid",
+    "@adonisjs/limiter"
   ],
   "metaFiles": [
     {

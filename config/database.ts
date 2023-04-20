@@ -1,10 +1,3 @@
-/**
- * Config source: https://git.io/JesV9
- *
- * Feel free to let us know via PR, if you find something broken in this config
- * file.
- */
-
 import Env from '@ioc:Adonis/Core/Env'
 import { DatabaseConfig } from '@ioc:Adonis/Lucid/Database'
 
@@ -48,8 +41,28 @@ const databaseConfig: DatabaseConfig = {
       healthCheck: false,
       debug: false,
     },
-
-  }
+  },
 }
 
-export default databaseConfig
+const limiterConfig: DatabaseConfig = {
+  default: 'redis',
+  connections: {
+    redis: {
+      client: 'redis',
+      connection: {
+        host: Env.get('REDIS_HOST'),
+        port: Env.get('REDIS_PORT'),
+      },
+    },
+  },
+  stores: {
+    redis: {
+      client: 'redis',
+      connection: 'redis',
+      keyPrefix: 'rate_limit',
+    },
+  },
+}
+
+export { databaseConfig }
+export { limiterConfig }
